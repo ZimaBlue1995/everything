@@ -11,6 +11,13 @@
         <projectService serviceImplementation="com.github.zimablue1995.everything.services.MyProjectService"/>
     </extensions>
 
+    <actions>
+        <group id="Everything.Action" text="杂货铺" description="啥都有!">
+            <add-to-group group-id="MainMenu" anchor="last"/>
+            <action class="com.github.zimablue1995.everything.action.GitCommitMsgAction" id="Everything.Action.GitCommitMsgAction" text="获取git提交记录"/>
+        </group>
+    </actions>
+
     <applicationListeners>
         <listener class="com.github.zimablue1995.everything.listeners.MyProjectManagerListener"
                   topic="com.intellij.openapi.project.ProjectManagerListener"/>
