@@ -14,7 +14,9 @@
     <actions>
         <group id="Everything.Action" text="杂货铺" description="啥都有!">
             <add-to-group group-id="MainMenu" anchor="last"/>
-            <action class="com.github.zimablue1995.everything.action.GitCommitMsgAction" id="Everything.Action.GitCommitMsgAction" text="获取git提交记录"/>
+            <action class="com.github.zimablue1995.everything.gitcommitmsg.action.GitCommitMsgAction" id="Everything.Action.GitCommitMsgAction" text="获取git提交记录" icon="PluginIcons.ICON_BOOLEAN"/>
+            <separator/>
+            <action class="com.github.zimablue1995.everything.killport.action.KillPortAction" id="Everything.Action.KillPortAction" text="通过端口杀死进程" icon="PluginIcons.ICON_INVISIBLE"/>
         </group>
     </actions>
 

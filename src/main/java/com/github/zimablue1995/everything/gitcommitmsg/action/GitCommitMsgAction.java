@@ -1,6 +1,6 @@
-package com.github.zimablue1995.everything.action;
+package com.github.zimablue1995.everything.gitcommitmsg.action;
 
-import com.github.zimablue1995.everything.view.DatePickerDialogWrapper;
+import com.github.zimablue1995.everything.gitcommitmsg.dialog.DatePickerDialogWrapper;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import org.jetbrains.annotations.NotNull;

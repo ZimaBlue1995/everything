@@ -1,4 +1,4 @@
-package com.github.zimablue1995.everything.view;
+package com.github.zimablue1995.everything.gitcommitmsg.dialog;
 
 import com.github.zimablue1995.everything.util.ToolUtil;
 import com.intellij.openapi.project.Project;
@@ -28,10 +28,6 @@ import java.util.Map;
 public class DatePickerDialogWrapper extends DialogWrapper {
 
     private JPanel panel;
-    private JRadioButton rb1;
-    private JRadioButton rb2;
-    private JRadioButton rb3;
-    //    private JTextField inputTextField;
     private CustomOKAction okAction;
     private DialogWrapperExitAction exitAction;
     private Project project;
@@ -60,9 +56,9 @@ public class DatePickerDialogWrapper extends DialogWrapper {
 //        label.setPreferredSize(new Dimension(100,100));
 //        panel.add(label, BorderLayout.CENTER);
 
-        rb1 = new JRadioButton("今天", true);
-        rb2 = new JRadioButton("昨天");
-        rb3 = new JRadioButton("前天");
+        JRadioButton rb1 = new JRadioButton("今天", true);
+        JRadioButton rb2 = new JRadioButton("昨天");
+        JRadioButton rb3 = new JRadioButton("前天");
 
         ButtonGroup group = new ButtonGroup();
         //添加JRadioButton到ButtonGroup中
