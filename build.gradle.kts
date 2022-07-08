@@ -54,6 +54,7 @@ tasks {
         withType<JavaCompile> {
             sourceCompatibility = it
             targetCompatibility = it
+            options.encoding = properties("encode")
         }
         withType<KotlinCompile> {
             kotlinOptions.jvmTarget = it
