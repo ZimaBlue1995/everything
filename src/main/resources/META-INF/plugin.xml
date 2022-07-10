@@ -2,7 +2,7 @@
 <idea-plugin>
     <id>com.github.zimablue1995.everything</id>
     <name>Everything</name>
-    <vendor>zimablue1995</vendor>
+    <vendor>ZimaBlue</vendor>
 
     <depends>com.intellij.modules.platform</depends>
 
