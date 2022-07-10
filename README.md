@@ -15,6 +15,7 @@
 - [ ] Click the <kbd>Watch</kbd> button on the top of the [IntelliJ Platform Plugin Template][template] to be notified about releases containing new features and fixes.
 
 <!-- Plugin description -->
+### 简介
 每天下班填工作量的时候都会想一个问题：**我今天到底干了什么**。答案都在git的commit记录里，git详细记录了我们这一天干了哪些事。那只要有个能一键拉取git记录并帮我们格式化好的工具就行了，于是就有了这个插件;
 
 开发时经常要用到一些系统的命令，但是经常记不住总得去翻文档/百度，于是这类功能也被集成进插件中；
