@@ -1,9 +1,11 @@
 package com.github.zimablue1995.everything.gitcommitmsg.dialog;
 
 import com.github.zimablue1995.everything.util.ToolUtil;
+import com.intellij.openapi.diagnostic.Logger;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.ui.DialogWrapper;
 import com.intellij.openapi.ui.Messages;
+import com.intellij.openapi.vfs.VirtualFile;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -13,6 +15,7 @@ import java.awt.event.ActionEvent;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
@@ -26,6 +29,8 @@ import java.util.Map;
  * @description:
  */
 public class DatePickerDialogWrapper extends DialogWrapper {
+
+    private static final Logger logger = Logger.getInstance(DatePickerDialogWrapper.class);
 
     private JPanel panel;
     private CustomOKAction okAction;
@@ -133,6 +138,7 @@ public class DatePickerDialogWrapper extends DialogWrapper {
             map.put("前天", now.minusDays(2));
 
             String msg = getGitCommitMsgByDate(map.get(time));
+            logger.warn("结果为:" + msg);
             if (msg == null || msg.trim().length() == 0) {
                 msg = "【当前时间段无git提交记录！】";
             }
@@ -176,9 +182,26 @@ public class DatePickerDialogWrapper extends DialogWrapper {
 
         String userCommand = "git config --get user.name";
         String user = execCMD(userCommand);
+        logger.warn("用户名为：" + user);
+        // try {
+        //     user = new String(user.getBytes("gbk"), "utf-8");
+        // } catch (UnsupportedEncodingException e) {
+        //     logger.error(e);
+        //     throw new RuntimeException(e);
+        // }
+        // logger.info("转码后的用户名为：" + user);
         String msgCommand = "git log --after=\"" + minFormat + "\" --before=\"" + maxFormat + "\" --author=\"" + user + "\" --pretty=format:%s --no-merges --reverse";
 
         String basePath = project.getBasePath();
+        // String directoryStoreFolder = Project.DIRECTORY_STORE_FOLDER;
+        // System.out.println("directoryStoreFolder = " + directoryStoreFolder);
+        // System.out.println("project = " + project);
+        // String projectFilePath = project.getProjectFilePath();
+        // VirtualFile projectFile = project.getProjectFile();
+        // VirtualFile workspaceFile = project.getWorkspaceFile();
+        // VirtualFile baseDir = project.getBaseDir();
+        logger.warn("项目路径为:" + basePath);
+        logger.warn("git命令为:" + msgCommand);
 
 //        String[] split = msg.split("\\r?\\n");
 //
@@ -217,6 +240,7 @@ public class DatePickerDialogWrapper extends DialogWrapper {
                 sb.append(line).append("\n");
             }
         } catch (Exception e) {
+            logger.warn(e);
             return e.toString();
         }
         return sb.toString();
