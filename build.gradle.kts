@@ -20,6 +20,11 @@ group = properties("pluginGroup")
 version = properties("pluginVersion")
 
 // Configure project's dependencies
+dependencies {
+    implementation("cn.hutool:hutool-all:5.8.4")
+    implementation("com.jcraft:jsch:0.1.55")
+}
+
 repositories {
     mavenCentral()
 }

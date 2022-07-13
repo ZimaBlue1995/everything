@@ -1,0 +1,96 @@
+JFDML JFormDesigner: "7.0.5.4.420" Java: "11.0.15" encoding: "UTF-8"
+
+new FormModel {
+	"i18n.autoExternalize": true
+	"i18n.bundlePackage": "properties"
+	"i18n.bundleName": "SSHConfigView"
+	"i18n.keyPrefix": "SSHConfigView"
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+			"$layoutConstraints": "hidemode 3"
+			"$columnConstraints": "[fill][fill][fill][fill][fill][fill][27,fill][fill][fill][fill][fill][fill][fill]"
+			"$rowConstraints": "[][][][][][][][144][34]"
+		} ) {
+			name: "this"
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "serverLabel"
+				"text": new FormMessage( null, "SSHConfigView.serverLabel.text" )
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 1 1,alignx center,growx 0"
+			} )
+			add( new FormComponent( "javax.swing.JSeparator" ) {
+				name: "separator1"
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 1 2 12 1"
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+				"$layoutConstraints": "hidemode 3"
+				"$columnConstraints": "[fill][fill][383,fill]"
+				"$rowConstraints": "[][][][][]"
+			} ) {
+				name: "serverPanel"
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "hostLabel"
+					"text": new FormMessage( null, "SSHConfigView.hostLabel.text" )
+				}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+					"value": "cell 0 0,alignx right,growx 0"
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "host"
+				}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+					"value": "cell 2 0"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "portLabel"
+					"text": new FormMessage( null, "SSHConfigView.portLabel.text" )
+				}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+					"value": "cell 0 1,alignx right,growx 0"
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "port"
+				}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+					"value": "cell 2 1"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "usernameLabel"
+					"text": new FormMessage( null, "SSHConfigView.usernameLabel.text" )
+				}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+					"value": "cell 0 2,alignx right,growx 0"
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "username"
+				}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+					"value": "cell 2 2"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "passwordLabel"
+					"text": new FormMessage( null, "SSHConfigView.passwordLabel.text" )
+				}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+					"value": "cell 0 3,alignx right,growx 0"
+				} )
+				add( new FormComponent( "javax.swing.JPasswordField" ) {
+					name: "password"
+				}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+					"value": "cell 2 3"
+				} )
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 1 3 12 1"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "linuxLabel"
+				"text": new FormMessage( null, "SSHConfigView.linuxLabel.text" )
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 1 5,alignx center,growx 0"
+			} )
+			add( new FormComponent( "javax.swing.JSeparator" ) {
+				name: "separator2"
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 1 6 12 1"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 195, 40 )
+			"size": new java.awt.Dimension( 610, 590 )
+		} )
+	}
+}

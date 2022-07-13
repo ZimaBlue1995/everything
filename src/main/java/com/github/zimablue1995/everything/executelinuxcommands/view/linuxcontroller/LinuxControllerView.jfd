@@ -1,0 +1,39 @@
+JFDML JFormDesigner: "7.0.5.4.420" Java: "11.0.15" encoding: "UTF-8"
+
+new FormModel {
+	"i18n.autoExternalize": true
+	"i18n.bundlePackage": "properties"
+	"i18n.bundleName": "LinuxControllerView"
+	"i18n.keyPrefix": "LinuxControllerView"
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+			"$layoutConstraints": "hidemode 3"
+			"$columnConstraints": "[fill][fill][599,fill][fill][fill][fill][fill]"
+			"$rowConstraints": "[224][][][][]"
+		} ) {
+			name: "this"
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "scrollPane"
+				add( new FormComponent( "javax.swing.JTable" ) {
+					name: "table"
+				} )
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 2 0"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "execButton"
+				"text": new FormMessage( null, "LinuxControllerView.execButton.text" )
+				"preferredSize": new java.awt.Dimension( 120, 30 )
+				"minimumSize": new java.awt.Dimension( 82, 30 )
+				"rolloverEnabled": false
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "execLinux", true ) )
+			}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+				"value": "cell 2 2,alignx trailing,growx 0"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 270, 185 )
+			"size": new java.awt.Dimension( 720, 435 )
+		} )
+	}
+}
