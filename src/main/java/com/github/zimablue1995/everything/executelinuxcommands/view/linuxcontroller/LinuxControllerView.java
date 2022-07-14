@@ -93,7 +93,8 @@ public class LinuxControllerView extends JFrame {
 
         Session session = JschUtil.getSession(serverConfig.getHost(), Integer.parseInt(serverConfig.getPort()), serverConfig.getUsername(), serverConfig.getPassword());
 
-        ProgressManager.getInstance().run(new Task.Backgroundable(project, "执行linux脚本中...") {
+        Object scriptName = table.getValueAt(row, 0);
+        ProgressManager.getInstance().run(new Task.Backgroundable(project, "执行脚本[" + scriptName + "]中...") {
             String exec;
 
             @Override
@@ -104,17 +105,19 @@ public class LinuxControllerView extends JFrame {
 
             @Override
             public void onFinished() {
-                MessageDialogBuilder.yesNo("脚本执行完成", exec).show();
+                MessageDialogBuilder.yesNo("脚本[" + scriptName + "]执行完成", exec).show();
             }
         });
 
+        // 关闭窗口
+        this.dispose();
     }
 
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
         ResourceBundle bundle = ResourceBundle.getBundle("properties.LinuxControllerView");
         scrollPane = new JScrollPane();
-        table = new JTable(){
+        table = new JTable() {
             // 表格不允许被编辑
             public boolean isCellEditable(int row, int column) {
                 return false;

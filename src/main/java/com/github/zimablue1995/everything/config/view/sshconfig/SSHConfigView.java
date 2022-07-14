@@ -43,7 +43,7 @@ public class SSHConfigView extends JPanel {
         linuxScriptConfigList = configuration.getLinuxScriptConfigList();
         linuxTable = createLinuxTable();
         linuxTable.getEmptyText().setText("脚本可以写成[sh /home/xxx/xx.sh], 多个linux命令可以用&&连接");
-        ToolbarDecorator toolbarDecorator = ToolbarDecorator.createDecorator(linuxTable, null);
+        ToolbarDecorator toolbarDecorator = ToolbarDecorator.createDecorator(linuxTable);
         toolbarDecorator.setMoveDownAction(null);
         toolbarDecorator.setMoveUpAction(null);
 

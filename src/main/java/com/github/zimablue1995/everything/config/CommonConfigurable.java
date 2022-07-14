@@ -69,7 +69,7 @@ public class CommonConfigurable implements SearchableConfigurable {
         serverConfig.setHost(form.getHost().getText().trim());
         serverConfig.setPort(form.getPort().getText().trim());
         serverConfig.setUsername(form.getUsername().getText().trim());
-        // serverConfig.setPassword(String.valueOf(form.getPassword().getPassword()));
+        serverConfig.setPassword(String.valueOf(form.getPassword().getPassword()));
 
 
 
