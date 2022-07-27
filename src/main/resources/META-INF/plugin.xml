@@ -2,9 +2,46 @@
 <idea-plugin>
     <id>com.github.zimablue1995.everything</id>
     <name>Everything</name>
-    <vendor>ZimaBlue</vendor>
+    <vendor email="cjcarryu@163.com" url="https://github.com/ZimaBlue1995">ZimaBlue</vendor>
 
     <depends>com.intellij.modules.platform</depends>
+
+    <description><![CDATA[
+
+    English version:<br/>
+    <p>
+    Just like the name of Everything, this plugin is an all-in-one plugin with many different kinds of functions. The functions of the plugin are very rich, not only a single function;<br/><br/>
+    The vision is to integrate all the functions commonly used in development into this plugin to achieve a true one-stop service.<br/><br/>
+    If the function you want is temporarily missing, please contact me to make it up.<br/>
+    </p>
+    <br/>
+    <br/>
+
+    <p>Function:</p>
+    <ul>
+        <li>Get git commit message</li>
+        <li>Kill processes by port</li>
+        <li>One-click execution of linux scripts</li>
+    </ul>
+
+    Chinese version:<br/>
+    <p>
+    正如其Everything的名字，本插件是一个拥有很多不同种类功能的多合一插件，插件的功能十分丰富，而不是只有单一的功能；<br/>
+    愿景是把所有开发中常用的功能都集成进本插件中，以做到真正的一站式服务。<br/>
+    如果你想要的功能暂时缺少，请联系我补上。<br/>
+    </p>
+    <br/>
+    <br/>
+
+    <p>功能:</p>
+    <ul>
+        <li>获取git提交记录</li>
+        <li>根据端口杀死进程</li>
+        <li>一键执行Linux脚本</li>
+    </ul>
+
+    ]]>
+    </description>
 
     <extensions defaultExtensionNs="com.intellij">
         <applicationService serviceImplementation="com.github.zimablue1995.everything.config.EveryThingComponent"/>
