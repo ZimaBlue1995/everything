@@ -91,7 +91,7 @@ public class LinuxControllerView extends JFrame {
         // TODO add your code here
         int rowCount = table.getRowCount();
         if (rowCount == 0) {
-            MessageDialogBuilder.yesNo("缺失脚本配置", "请先点击【服务器及脚本配置】按钮配置好脚本").ask(project);
+            MessageDialogBuilder.yesNo("缺失脚本配置", "请先点击【服务器及脚本配置】按钮配置好脚本").show();
             return;
         }
 
@@ -110,7 +110,7 @@ public class LinuxControllerView extends JFrame {
         String password = serverConfig.getPassword();
 
         if (BasicUtil.isEmpyt(host) || BasicUtil.isEmpyt(port) || BasicUtil.isEmpyt(username) || BasicUtil.isEmpyt(password)) {
-            MessageDialogBuilder.yesNo("缺失服务器配置", "请先点击【服务器及脚本配置】按钮配置好服务器").ask(project);
+            MessageDialogBuilder.yesNo("缺失服务器配置", "请先点击【服务器及脚本配置】按钮配置好服务器").show();
             return;
         }
 
